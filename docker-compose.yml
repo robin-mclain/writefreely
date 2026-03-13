@@ -1,5 +1,3 @@
-version: "3"
-
 volumes:
   web-keys:
   db-data:
@@ -23,7 +21,7 @@ services:
       - "external_writefreely"
 
     ports:
-      - "8080:8080"
+      - "8704:8080"
 
     depends_on:
       - "writefreely-db"
@@ -42,6 +40,6 @@ services:
 
     environment:
       - MYSQL_DATABASE=writefreely
-      - MYSQL_ROOT_PASSWORD=changeme
+      - MYSQL_ROOT_PASSWORD=flagstone-emerald-alto9-craziness
 
     restart: unless-stopped
